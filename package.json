@@ -2,7 +2,7 @@
   "name": "api-cacher",
   "version": "2.2.0",
   "description": "Most simple way to add caching in Promise based API in JavaScript",
-  "main": "apiCacher.js",
+  "main": "dist/apiCacher.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "webpack --watch & http-server dist -p 8000 & wait"
