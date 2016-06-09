@@ -1,6 +1,6 @@
 {
   "name": "api-cacher",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Most simple way to add caching in Promise based API in JavaScript",
   "main": "dist/apiCacher.js",
   "scripts": {
