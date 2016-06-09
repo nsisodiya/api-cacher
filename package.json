@@ -1,0 +1,32 @@
+{
+  "name": "api-cacher",
+  "version": "1.0.0",
+  "description": "Most simple way to add caching in Promise based API in JavaScript",
+  "main": "apiCacher.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "webpack --watch & http-server dist -p 8000 & wait"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsisodiya/api-cacher.git"
+  },
+  "keywords": [
+    "cache",
+    "promise"
+  ],
+  "author": "Narendra Sisodiya <narendra@narendrasisodiya.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nsisodiya/api-cacher/issues"
+  },
+  "homepage": "https://github.com/nsisodiya/api-cacher#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "webpack": "^1.13.1",
+    "webpack-livereload-plugin": "^0.8.1"
+  }
+}
