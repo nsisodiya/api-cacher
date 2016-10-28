@@ -105,14 +105,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  console.log("async data, immediate1", data.users);
 	});
 
-	window.setTimeout(function() {
+	setTimeout(function() {
 	  API.USER.findCached().then(function(data) {
 	    data.users.push("5");
 	    console.log("async data, 5 sec", data.users);
 	  });
 	}, 5000);
 
-	window.setTimeout(function() {
+	setTimeout(function() {
 	  API.USER.findCached().then(function(data) {
 	    data.users.push("7");
 	    console.log("async data, 7 sec", data.users);

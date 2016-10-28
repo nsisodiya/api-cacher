@@ -4,7 +4,7 @@
 
 module.exports = function (config) {
   var cache = {};
-  return function (reqObj) {
+  var API = function (reqObj) {
     if (config.cache === true) {
       var hash = config.cacheHash(reqObj);
       if (cache[hash] === undefined) {
@@ -19,4 +19,14 @@ module.exports = function (config) {
       return config.request(reqObj);
     }
   };
+  if (Array.isArray(config.parent) === true) {
+    API.isCached = true;
+    config.parent.forEach(function (v, i) {
+      API.isCached = API.isCached && v.isCached;
+    });
+    config.cache = API.isCached;
+  } else {
+    API.isCached = config.cache;
+  }
+  return API;
 };
